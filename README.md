@@ -1,19 +1,12 @@
 # Real-Time Multilingual Court Proceeding Summarization System
 ### Using Speech Recognition and Strictly Extractive Summarization
 
-[![CI Quality Assurance](https://github.com/academic-capstone/court-summarizer/actions/workflows/ci.yml/badge.svg)](https://github.com/academic-capstone/court-summarizer/actions/workflows/ci.yml)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Streamlit UI](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)](https://streamlit.io/)
-[![FastAPI](https://img.shields.io/badge/API-FastAPI-009688.svg)](https://fastapi.tiangolo.com/)
 
-> **Academic Capstone Project**  
-> **Course**: Speech and Language Processing  
 > **Domain**: Judicial NLP, Legal Speech Processing & Assistive Systems  
 
 ---
 
-## 🏛️ Core Design Principles
+##  Core Design Principles
 
 1. **Strictly Extractive Verbatim Summarization**: The system selects complete, real transcript sentences and **never invents, paraphrases, or hallucinates text**.
 2. **Strict Segregation of Allegations vs. Judicial Rulings**: Statements made by prosecution or defense advocates are explicitly tagged (`[ADVOCATE_ALLEGATION]`), preventing unproven submissions from masquerading as binding court orders (`[JUDICIAL_RULING]`).
@@ -22,7 +15,7 @@
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 Court_Summarization/
@@ -169,7 +162,7 @@ pytest tests/ -v
 
 ---
 
-## ☁️ Google Colab (GPU Acceleration) Setup
+##  Google Colab (GPU Acceleration) Setup
 
 For zero-setup GPU execution:
 1. Open Google Colab: [colab.research.google.com](https://colab.research.google.com).
@@ -179,7 +172,7 @@ For zero-setup GPU execution:
 
 ---
 
-## 🐳 Docker Container Deployment
+##  Docker Container Deployment
 
 Run the complete multi-service stack (FastAPI backend on port 8000, Streamlit UI on port 8501) with a single command:
 
@@ -189,7 +182,7 @@ docker-compose up --build
 
 ---
 
-## 📊 Evaluation & Ablation Summary
+##  Evaluation & Ablation Summary
 
 Evaluated across human-annotated gold-standard courtroom proceedings:
 
@@ -204,7 +197,7 @@ Evaluated across human-annotated gold-standard courtroom proceedings:
 
 ---
 
-## 🎓 Academic Defense & Viva Voce Resources
+##  Academic Defense & Viva Voce Resources
 
 - **Final Capstone Technical Report**: [`reports/capstone_final_report.md`](reports/capstone_final_report.md)
 - **25 Viva Voce Questions & Answers**: [`reports/viva_preparation_guide.md`](reports/viva_preparation_guide.md)
@@ -213,7 +206,7 @@ Evaluated across human-annotated gold-standard courtroom proceedings:
 
 ---
 
-## 📜 Citation & Academic Use
+##  Citation & Academic Use
 
 If you use this codebase or methodology for academic research, please cite:
 
