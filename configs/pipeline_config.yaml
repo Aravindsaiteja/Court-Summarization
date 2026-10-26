@@ -1,0 +1,56 @@
+# System Pipeline Configuration for Multilingual Court Proceeding Summarizer
+
+seed: 42
+
+audio:
+  target_sample_rate: 16000
+  channels: 1
+  codec: "pcm_s16le"
+  target_lufs: -23.0
+  noise_reduction_strength: 0.35  # conservative, avoids spectral smearing of legal speech
+  silence_thresh_db: -36.0
+  min_silence_len_ms: 600
+  chunk_duration_sec: 25.0
+  vad_filter: true
+
+asr:
+  backend: "faster_whisper"     # faster_whisper | openai_whisper
+  default_model: "base"         # tiny | base | small | medium | large-v3
+  device: "cpu"                 # cpu | cuda (auto-detected in runtime)
+  compute_type: "int8"          # int8 for fast CPU inference; float16 for CUDA
+  beam_size: 5
+  temperature: 0.0
+  condition_on_previous_text: false  # prevents infinite looping on background acoustics
+  language_confidence_threshold: 0.65
+
+translation:
+  enabled: true
+  service: "whisper_translate"  # whisper_translate | marian | indictrans2
+  target_language: "en"
+  alignment_mode: "sentence_parallel"
+
+preprocessing:
+  normalize_unicode: true
+  clean_hesitations: true       # cleans "um", "uh", "err" while retaining strict sentence boundaries
+  preserve_casing_for_names: true
+  min_sentence_words: 3
+  max_sentence_words: 70
+
+summarization:
+  available_methods:
+    - "tfidf"
+    - "textrank"
+    - "embedding_mmr"
+  default_method: "embedding_mmr"
+  default_ratio: 0.25           # extract ~25% of salient transcript sentences
+  min_summary_sentences: 3
+  max_summary_sentences: 8
+  mmr_lambda: 0.65              # trade-off: 0.65 relevance, 0.35 diversity
+  embedding_model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  legal_boost_enabled: true
+  separation_mode: "highlight_arguments"
+
+storage:
+  db_path: "data/court_jobs.db"
+  audio_dir: "data/extracted_audio"
+  output_dir: "outputs"

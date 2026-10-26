@@ -1,0 +1,16 @@
+===========================================================================
+COURT PROCEEDING EXTRACTIVE SUMMARY REPORT
+Case / Recording: YTDown.com_YouTube_Media_aoO9IyK-96o_Madhav-Mishra-on-Fire-Epic-Court-Scene-Lekha-Criminal-Justice-S3-Applause-Entert_002_720p
+Detected Language: HI (97.8% confidence)
+Duration: 151.35s | Method: TextRank Graph Centrality Summarizer
+DISCLAIMER: This extractive summary is an assistive reference tool for academic and
+research purposes only. Verify all statements against the original video recordings.
+===========================================================================
+
+--- KEY CHRONOLOGICAL COURT MOMENTS ---
+
+1. [049.0s - 065.0s] [JUDICIAL_RULING]
+   Summary (English): In view of the material contradictions in the evidence, the Court hereby grants conditional bail to the accused on a surety bond of fifty thousand rupees.
+   Original (HI):  साक्ष्यों में विरोधाभास को देखते हुए अदालत आरोपी को पचास हजार के मुचलके पर सशर्त जमानत प्रदान करती है।
+   Salience Score: 7.5
+

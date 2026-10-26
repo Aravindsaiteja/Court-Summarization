@@ -1,0 +1,51 @@
+{
+  "case_id": "CASE_HI_01",
+  "source_title": "Criminal Justice S3 (Madhav Mishra)",
+  "language": "hi",
+  "sentences": [
+    {
+      "sentence_id": 1,
+      "speaker": "Madhav Mishra",
+      "speaker_role": "Defense Counsel",
+      "start_time": 5.0,
+      "end_time": 18.0,
+      "text": "हुजूर, अभियोजन पक्ष ने मेरे मुवक्किल पर गैर-इरादतन हत्या का झूठा आरोप लगाया है बिना किसी प्रत्यक्षदर्शी के।",
+      "salience_score": 2,
+      "category": "DEFENSE_ARGUMENT",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 2,
+      "speaker": "Prosecution Counsel",
+      "speaker_role": "Prosecutor",
+      "start_time": 18.5,
+      "end_time": 30.0,
+      "text": "फॉरेंसिक रिपोर्ट और घटनास्थल से मिले फिंगरप्रिंट स्पष्ट रूप से आरोपी की मौजूदगी सिद्ध करते हैं।",
+      "salience_score": 3,
+      "category": "FORENSIC_EVIDENCE",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 3,
+      "speaker": "Madhav Mishra",
+      "speaker_role": "Defense Counsel",
+      "start_time": 31.0,
+      "end_time": 48.0,
+      "text": "लेकिन कॉल डिटेल रिकॉर्ड्स और सीसीटीवी फुटेज यह साबित करते हैं कि वारदात के समय मुवक्किल अस्पताल में उपस्थित था।",
+      "salience_score": 3,
+      "category": "EXCULPATORY_ALIBI",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 4,
+      "speaker": "Judge",
+      "speaker_role": "Judge",
+      "start_time": 49.0,
+      "end_time": 65.0,
+      "text": "साक्ष्यों में विरोधाभास को देखते हुए अदालत आरोपी को पचास हजार के मुचलके पर सशर्त जमानत प्रदान करती है।",
+      "salience_score": 3,
+      "category": "JUDICIAL_RULING",
+      "in_gold_summary": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+===========================================================================
+COURT PROCEEDING EXTRACTIVE SUMMARY REPORT
+Case / Recording: CASE_EN_02
+Detected Language: EN (99.1% confidence)
+Duration: 180.49s | Method: TextRank Graph Centrality Summarizer
+DISCLAIMER: This extractive summary is an assistive reference tool for academic and
+research purposes only. Verify all statements against the original video recordings.
+===========================================================================
+
+--- KEY CHRONOLOGICAL COURT MOMENTS ---
+
+1. [082.0s - 088.4s] [JUDICIAL_RULING]
+   Summary (English): I am actually inclined to agree with you, mr. Sheldt.
+   Salience Score: 0.6754
+
+2. [090.0s - 092.8s] [JUDICIAL_RULING]
+   Summary (English): Your Honor, mr. Sheldt, and has agreed to give us a full confession.
+   Salience Score: 2.1572
+
+3. [127.1s - 130.2s] [JUDICIAL_RULING]
+   Summary (English): I would tread carefully, mr. Sheldon.
+   Salience Score: 1.0985
+

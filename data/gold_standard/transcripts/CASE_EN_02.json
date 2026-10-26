@@ -1,0 +1,73 @@
+{
+  "case_id": "CASE_EN_02",
+  "source_title": "Law Abiding Citizen (2009)",
+  "language": "en",
+  "sentences": [
+    {
+      "sentence_id": 1,
+      "speaker": "Judge Laura Burch",
+      "speaker_role": "Judge",
+      "start_time": 8.0,
+      "end_time": 15.2,
+      "text": "Mr. Clyde Shelton, you stand before this court charged with aggravated homicide and conspiracy.",
+      "salience_score": 3,
+      "category": "CHARGES_FRAMED",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 2,
+      "speaker": "Prosecutor Nick Rice",
+      "speaker_role": "Prosecutor",
+      "start_time": 15.8,
+      "end_time": 26.5,
+      "text": "The Commonwealth requests bail be denied outright; the defendant represents an extraordinary flight risk and an active danger to society.",
+      "salience_score": 2,
+      "category": "BAIL_OPPOSITION",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 3,
+      "speaker": "Clyde Shelton",
+      "speaker_role": "Defendant (Pro Se)",
+      "start_time": 27.2,
+      "end_time": 44.0,
+      "text": "Your Honor, the prosecution's entire petition relies upon circumstantial conjecture and precedent established in State v. Stewart, which requires tangible physical evidence before revoking pretrial liberty.",
+      "salience_score": 3,
+      "category": "LEGAL_SUBMISSION",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 4,
+      "speaker": "Judge Laura Burch",
+      "speaker_role": "Judge",
+      "start_time": 45.0,
+      "end_time": 58.5,
+      "text": "I find the defense argument persuasive on strict statutory grounds, and under normal procedure I would have been inclined to set bail at five hundred thousand dollars.",
+      "salience_score": 2,
+      "category": "JUDICIAL_OBSERVATION",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 5,
+      "speaker": "Clyde Shelton",
+      "speaker_role": "Defendant",
+      "start_time": 59.0,
+      "end_time": 75.0,
+      "text": "Would you really let me walk out of here on bail when I just confessed to butchering a man with my bare hands?",
+      "salience_score": 3,
+      "category": "IN-COURT_CONFESSION",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 6,
+      "speaker": "Judge Laura Burch",
+      "speaker_role": "Judge",
+      "start_time": 76.0,
+      "end_time": 88.0,
+      "text": "I hold you in direct contempt of court; bail is formally revoked and you will be remanded to maximum security custody immediately.",
+      "salience_score": 3,
+      "category": "JUDICIAL_RULING",
+      "in_gold_summary": true
+    }
+  ]
+}

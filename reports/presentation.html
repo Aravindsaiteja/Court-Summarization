@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIT Chennai - Capstone Project Review 1 Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card-bg: #131d33;
+      --card-border: #1e293b;
+      --accent-blue: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-emerald: #10b981;
+      --accent-red: #ef4444;
+      --text-white: #ffffff;
+      --text-light: #e2e8f0;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-light);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+    header.deck-header {
+      background: rgba(19, 29, 51, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-title { font-size: 14px; font-weight: 700; color: var(--text-white); }
+    .brand-subtitle { font-size: 11.5px; color: var(--accent-blue); }
+    .controls { display: flex; align-items: center; gap: 12px; }
+    .btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-light);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn:hover { background: #1e293b; border-color: var(--accent-blue); color: var(--accent-blue); }
+    .btn.primary { background: linear-gradient(135deg, #0284c7, #0369a1); border: none; color: white; }
+    .slide-select {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-white);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      outline: none;
+      cursor: pointer;
+    }
+    .main-container {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      flex: 1;
+      height: calc(100vh - 61px);
+    }
+    .presentation-viewport {
+      padding: 24px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+    }
+    .slide-canvas {
+      width: 100%;
+      max-width: 1100px;
+      aspect-ratio: 16 / 9;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+      padding: 32px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide-tag {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent-blue);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .slide-title { font-size: 24px; font-weight: 800; color: var(--text-white); line-height: 1.25; margin-bottom: 4px; }
+    .slide-subtitle { font-size: 12.5px; color: var(--accent-gold); font-style: italic; margin-bottom: 16px; }
+    .slide-body { flex: 1; display: flex; gap: 16px; align-items: center; overflow: hidden; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 100%; height: 100%; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; width: 100%; height: 100%; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; width: 100%; height: 100%; }
+    .feature-card {
+      background: rgba(11, 17, 32, 0.6);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      height: 100%;
+    }
+    .feature-card.highlight { border-color: var(--accent-blue); background: rgba(56, 189, 248, 0.05); }
+    .feature-card.success { border-color: var(--accent-emerald); background: rgba(16, 185, 129, 0.05); }
+    .feature-card.warning { border-color: var(--accent-gold); background: rgba(245, 158, 11, 0.05); }
+    .feature-card.danger { border-color: var(--accent-red); background: rgba(239, 68, 68, 0.05); }
+    .card-title { font-size: 13px; font-weight: 700; color: var(--text-white); }
+    .card-desc { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+    .card-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .card-list li { font-size: 11px; color: var(--text-light); line-height: 1.4; }
+    .card-list li::before { content: "• "; color: var(--accent-blue); font-weight: bold; }
+    .img-showcase { width: 100%; height: 100%; max-height: 380px; object-fit: contain; border-radius: 10px; border: 1px solid var(--card-border); }
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 10px;
+      margin-top: 8px;
+      font-size: 10.5px;
+      color: var(--text-muted);
+    }
+    /* Speaker Notes Sidebar */
+    .notes-sidebar { background: #0d1527; border-left: 1px solid var(--card-border); display: flex; flex-direction: column; overflow-y: auto; }
+    .notes-header { padding: 14px 18px; border-bottom: 1px solid var(--card-border); background: rgba(19, 29, 51, 0.5); }
+    .notes-header h3 { font-size: 13.5px; font-weight: 700; color: var(--text-white); }
+    .timing-badge {
+      display: inline-block;
+      margin-top: 4px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 10.5px;
+      font-weight: 600;
+    }
+    .notes-content { padding: 18px; display: flex; flex-direction: column; gap: 16px; font-size: 12.5px; line-height: 1.55; }
+    .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--accent-blue); margin-bottom: 4px; }
+    .script-box { background: #111a2e; border-left: 3px solid var(--accent-blue); border-radius: 6px; padding: 12px; color: #f1f5f9; font-style: italic; }
+    .viva-box { background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px; color: #a7f3d0; }
+    table.data-table { width: 100%; border-collapse: collapse; font-size: 10px; }
+    table.data-table th { background: #1e3a8a; color: white; text-align: left; padding: 6px 8px; font-weight: 600; }
+    table.data-table td { padding: 5px 8px; border-bottom: 1px solid var(--card-border); color: var(--text-light); }
+    table.data-table tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
+    .nav-arrow {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--card-border);
+      color: white;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .nav-arrow:hover { background: var(--accent-blue); color: #0b1120; }
+  </style>
+</head>
+<body>
+
+  <header class="deck-header">
+    <div class="brand">
+      <span style="font-size: 22px;">🏛️</span>
+      <div>
+        <div class="brand-title">VIT Chennai • Capstone Project Review 1</div>
+        <div class="brand-subtitle">Real-Time Multilingual Court Proceeding Summarizer</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="nav-arrow" id="prevBtn" title="Previous Slide (Left Arrow)">◀</button>
+      <select id="slideSelect" class="slide-select"></select>
+      <button class="nav-arrow" id="nextBtn" title="Next Slide (Right Arrow / Space)">▶</button>
+      <a href="Court_Proceeding_Summarization_Review1.pptx" download class="btn primary">
+        📥 Download Review 1 PPTX (1.2 MB)
+      </a>
+      <button class="btn" id="toggleNotesBtn">Toggle Notes</button>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="presentation-viewport">
+      <div class="slide-canvas" id="slideCanvas"></div>
+    </div>
+
+    <aside class="notes-sidebar" id="notesSidebar">
+      <div class="notes-header">
+        <h3>🎙️ Slide Script & Reviewer Defense</h3>
+        <span class="timing-badge" id="slideTiming">⏱ 45 Seconds</span>
+      </div>
+      <div class="notes-content">
+        <div>
+          <div class="section-title">🎯 Slide Objective</div>
+          <div id="slideObjective" style="color: var(--text-light);"></div>
+        </div>
+        <div>
+          <div class="section-title">🗣️ Spoken Script (Say Out Loud)</div>
+          <div class="script-box" id="slideScript"></div>
+        </div>
+        <div>
+          <div class="section-title">💡 Reviewer Defense Tip</div>
+          <div class="viva-box" id="slideViva"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    const slidesData = [
+      {
+        tag: "Slide 01 • Title",
+        title: "Real-Time Multilingual Court Proceeding Summarization System",
+        subtitle: "Using Speech Recognition & Strictly Extractive Summarization with Temporal Anchoring",
+        timing: "45 Seconds",
+        objective: "State project title, student credentials, VIT Chennai branding, and Review 1 milestone.",
+        script: "Respected reviewers and faculty guide, good morning. I am Aravind S, presenting Capstone Project Review 1 for the course Speech and Language Processing on the topic: 'Real-Time Multilingual Court Proceeding Summarization System Using Speech Recognition and Strictly Extractive Summarization'. This project bridges speech recognition, audio engineering, and judicial NLP to convert raw multilingual court video into verified extractive summaries.",
+        viva: "Keep your introduction concise and confident. State the college, branch, and course clearly.",
+        html: `
+          <div style="display:flex; flex-direction:column; justify-content:center; gap:16px; height:100%;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <img src="presentation_assets/vit_logo.png" style="height:48px; border-radius:6px;" alt="VIT Logo">
+              <span style="background:#1e293b; border:1px solid #f59e0b; color:#f59e0b; font-size:11px; font-weight:700; padding:4px 12px; border-radius:20px;">PROJECT REVIEW 1</span>
+            </div>
+            <div style="background:rgba(56,189,248,0.05); border:1px solid #1e3a8a; border-radius:10px; padding:16px;">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:11.5px;">
+                <div><strong style="color:white;">Candidate Name:</strong> Aravind S [Your Name]</div>
+                <div><strong style="color:white;">Register Number:</strong> [Your Reg No / 21BCE1234]</div>
+                <div><strong style="color:white;">Branch / Degree:</strong> B.Tech CSE (AI & ML)</div>
+                <div><strong style="color:white;">Institution:</strong> VIT Chennai Campus</div>
+                <div><strong style="color:white;">Faculty Guide:</strong> [Guide Name / Faculty Supervisor]</div>
+                <div><strong style="color:white;">Course:</strong> Speech and Language Processing</div>
+              </div>
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 02 • Agenda",
+        title: "Presentation Agenda",
+        subtitle: "One line each: problem, objectives, literature, architecture, dataset, methodology, evaluation, plan",
+        timing: "30 Seconds",
+        objective: "Provide a quick roadmap of the 16 slides.",
+        script: "Here is the agenda for today's Review 1: We will cover the judicial problem statement, core objectives, a 6-paper literature survey, the identified research gaps, our complete system architecture, the multilingual dataset plan, the three extractive summarization methodologies, tools, evaluation plans, and our phase-wise project timeline.",
+        viva: "Move quickly through this slide; it establishes structure.",
+        html: `
+          <div class="grid-2">
+            <div class="feature-card highlight"><div class="card-title">1. Problem & Motivation</div><div class="card-desc">Multi-hour courtroom video scrub burden & code-switching</div></div>
+            <div class="feature-card highlight"><div class="card-title">2. Objectives & Scope</div><div class="card-desc">6 core engineering targets with explicit negative boundaries</div></div>
+            <div class="feature-card highlight"><div class="card-title">3. Literature Survey</div><div class="card-desc">Systematic review of 6 verified benchmark academic papers</div></div>
+            <div class="feature-card highlight"><div class="card-title">4. Research Gap & Novelty</div><div class="card-desc">Overcoming LLM hallucination via domain-boosted extraction</div></div>
+            <div class="feature-card highlight"><div class="card-title">5. System Architecture</div><div class="card-desc">Horizontal modular pipeline from raw video to Streamlit UI</div></div>
+            <div class="feature-card highlight"><div class="card-title">6. Dataset & Methodology</div><div class="card-desc">10 proceedings, 4 languages, 3 algorithms & legal booster</div></div>
+            <div class="feature-card highlight"><div class="card-title">7. Tools & Evaluation Plan</div><div class="card-desc">Python/FFmpeg stack, WER/ROUGE/BERTScore metrics</div></div>
+            <div class="feature-card highlight"><div class="card-title">8. Timeline & Ethics</div><div class="card-desc">Week-by-week Gantt chart, risks, mitigations & conclusion</div></div>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 03 • Motivation",
+        title: "Introduction and Motivation",
+        subtitle: "Court hearings are long, multilingual and recorded as video—manual review wastes precious hours",
+        timing: "50 Seconds",
+        objective: "Showcase the operational friction of manual video review with an icon strip.",
+        script: "In modern digital courts, hundreds of hours of proceedings are recorded on video. Reviewing a single 3-hour hearing requires a junior lawyer or law student to spend over 5 hours manually scrubbing back and forth. Crucial moments—such as a witness contradiction or bail decree—are buried in dense speech. Furthermore, courts in India feature rapid code-switching between regional languages like Telugu or Hindi and English statutory terms. Manual review is slow, exhausting, and prone to oversight.",
+        viva: "Emphasize the top icon strip: converting multi-hour raw video into traceable extractive summaries.",
+        html: `
+          <div style="display:flex; flex-direction:column; gap:12px; height:100%;">
+            <div style="background:#1e293b; border:1px solid #38bdf8; border-radius:8px; padding:10px; text-align:center; font-size:11px; font-weight:700; color:#38bdf8;">
+              [3-6 Hour Court Video] ➔ [Manual Scrubbing Burden] ➔ [High Friction & Fatigue] ➔ [NEED: Automated Extractive Pipeline]
+            </div>
+            <div class="grid-3" style="flex:1;">
+              <div class="feature-card danger"><div class="card-title">Multi-Hour Hearings</div><div class="card-desc">Contested trials span 3-6 hours. Review takes 4x to 6x duration without video chapter markers.</div></div>
+              <div class="feature-card warning"><div class="card-title">Multilingual Reality</div><div class="card-desc">Fast code-switching between regional vernaculars (HI, TE, TA) and English statutes.</div></div>
+              <div class="feature-card success"><div class="card-title">Urgent Assistive Need</div><div class="card-desc">Automated speech-to-text with microsecond video jump links saves hundreds of hours.</div></div>
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 04 • Problem Statement",
+        title: "Formal Problem Statement",
+        subtitle: "2-3 sentences defining the core scientific and operational challenge",
+        timing: "45 Seconds",
+        objective: "Deliver the 2-3 sentence definition verbatim.",
+        script: "Here is our formal problem statement: Court hearings produce dense, multi-hour multilingual video recordings that are prohibitively time-consuming to review manually. Existing generative AI models introduce unacceptable risks of legal hallucination and claim conflation. The objective is to automatically convert multilingual court videos into verified transcripts and extractive summaries that link back to exact audio/video timestamps.",
+        viva: "Reviewers specifically look for clarity and bound boundaries here.",
+        html: `
+          <div style="display:flex; flex-direction:column; gap:14px; height:100%; justify-content:center;">
+            <div style="background:#1e293b; border-left:4px solid #ef4444; border-radius:8px; padding:18px;">
+              <div style="color:#ef4444; font-size:11px; font-weight:700; text-transform:uppercase; margin-bottom:6px;">Formal Problem Definition</div>
+              <p style="font-size:13.5px; font-weight:600; color:white; line-height:1.6;">
+                "Court hearings produce dense, multi-hour multilingual video recordings that are prohibitively time-consuming to review manually. Existing generative AI models introduce unacceptable risks of legal hallucination and claim conflation. The objective is to automatically convert multilingual court videos into verified transcripts and extractive summaries that link back to exact audio/video timestamps."
+              </p>
+            </div>
+            <div class="grid-3">
+              <div class="feature-card highlight"><div class="card-title">Acoustic & ASR Barrier</div><div class="card-desc">Gavel strikes vs quiet witnesses, code-switching across 4 languages.</div></div>
+              <div class="feature-card success"><div class="card-title">Extractive Fidelity</div><div class="card-desc">Verbatim sentence selection with zero generative hallucination.</div></div>
+              <div class="feature-card warning"><div class="card-title">Temporal Auditability</div><div class="card-desc">Every summary sentence anchors to [start_time, end_time].</div></div>
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 05 • Objectives & Scope",
+        title: "Objectives and Scope Boundaries",
+        subtitle: "5-6 bullets outlining core technical targets alongside explicit negative boundaries",
+        timing: "50 Seconds",
+        objective: "Detail the 6 objectives and highlight what is Out of Scope.",
+        script: "Our primary objectives encompass the full engineering pipeline: 1. Audio extraction and EBU R128 loudness normalization; 2. Multilingual ASR across four languages with automated language ID; 3. Implementation and benchmarking of three extractive summarizers; 4. Legal domain salience boosting; 5. Empirical evaluation using WER, ROUGE, and BERTScore; and 6. A working Streamlit web interface with video jump links. Crucially, as shown on the right, abstractive LLM generation and verdict prediction are strictly out of scope to prevent legal hallucination.",
+        viva: "Evaluators appreciate clear boundary definitions; it proves you know where AI should stop in high-stakes law.",
+        html: `
+          <div class="grid-2">
+            <div class="feature-card success">
+              <div class="card-title" style="color:#10b981;">PRIMARY PROJECT OBJECTIVES</div>
+              <ul class="card-list" style="margin-top:6px;">
+                <li><strong>Video-to-Audio Ingestion:</strong> Demux to 16 kHz mono WAV with EBU R128 (-23 LUFS) norm.</li>
+                <li><strong>Multilingual ASR:</strong> Transcribe EN, HI, TE, TA with automated language identification.</li>
+                <li><strong>Three Extractive Methods:</strong> Implement and benchmark TF-IDF, TextRank, and MiniLM MMR.</li>
+                <li><strong>Legal-Domain Salience Boost:</strong> Weight statutory cues and segregate allegations from rulings.</li>
+                <li><strong>Empirical Benchmark:</strong> Evaluate using WER, ROUGE-1/2/L, and semantic BERTScore.</li>
+                <li><strong>Interactive Web App:</strong> Streamlit UI with synchronized video scrubbing and PDF export.</li>
+              </ul>
+            </div>
+            <div class="feature-card danger">
+              <div class="card-title" style="color:#ef4444;">EXPLICIT SCOPE BOUNDARIES</div>
+              <ul class="card-list" style="margin-top:6px;">
+                <li>❌ <strong>No Abstractive LLM Generation:</strong> Prevents legal hallucination and claim inversion.</li>
+                <li>❌ <strong>No Legal Outcome Prediction:</strong> Does not predict verdicts or replace judges.</li>
+                <li>❌ <strong>No Legal Advice:</strong> Functions strictly as an assistive research review tool.</li>
+                <li>❌ <strong>Mandatory Human Audit:</strong> Official court records remain legally binding.</li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 06 • Literature Survey",
+        title: "Comprehensive Literature Survey",
+        subtitle: "Table with 6 verified benchmark papers across Whisper, TextRank, and Legal NLP",
+        timing: "60 Seconds",
+        objective: "Walk through the verified papers and the research gap each one left open.",
+        script: "Our literature survey covers 6 foundational papers: Radford et al. introduced Whisper for multilingual ASR, but it lacks legal domain prompts and loops on court echo. Mihalcea & Tarau introduced TextRank for unsupervised graph summarization, but it operates on text without temporal links. Reimers & Gurevych developed Sentence-BERT, but generic embeddings cannot distinguish advocate allegations from judicial rulings. Bhattacharya et al. summarized Indian Supreme Court judgements, but strictly on written text, ignoring courtroom audio/video. Carbonell & Goldstein formulated MMR for redundancy control. And EBU R128 standardizes loudness. Our project integrates these strengths into a unified courtroom speech pipeline.",
+        viva: "Reviewers frequently check if papers are real. All 6 papers listed are verified academic citations.",
+        html: `
+          <div style="height:100%; display:flex; flex-direction:column; justify-content:center;">
+            <table class="data-table">
+              <thead>
+                <tr><th>Paper & Author</th><th>Method</th><th>Dataset</th><th>Reported Result</th><th>Identified Research Gap</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Radford et al. (OpenAI, 2023)</strong></td><td>Whisper Multilingual ASR</td><td>680k hrs web audio</td><td>Robust zero-shot speech ASR</td><td>Lacks legal prompts; loops on reverberation</td></tr>
+                <tr><td><strong>Mihalcea & Tarau (EMNLP, 2004)</strong></td><td>TextRank (PageRank on graph)</td><td>Open text documents</td><td>Unsupervised sentence salience</td><td>Text-only; lacks temporal video anchors</td></tr>
+                <tr><td><strong>Reimers & Gurevych (EMNLP, 2019)</strong></td><td>Sentence-BERT / MiniLM</td><td>NLI & STS corpora</td><td>Fast dense semantic vectors</td><td>Conflates advocate claims with judicial rulings</td></tr>
+                <tr><td><strong>Bhattacharya et al. (AI & Law, 2021)</strong></td><td>Legal Document Summarizer</td><td>Supreme Court text</td><td>Domain legal text summaries</td><td>Written text only; zero speech/video input</td></tr>
+                <tr><td><strong>Carbonell & Goldstein (SIGIR, 1998)</strong></td><td>Maximal Marginal Relevance</td><td>Document retrieval</td><td>Redundancy suppression</td><td>Generic metric; lacks statutory weighting</td></tr>
+                <tr><td><strong>ITU-R / EBU R128 (2014)</strong></td><td>Psychoacoustic Loudness Norm</td><td>Broadcast audio</td><td>-23 LUFS loudness standard</td><td>Broadcast spec; unintegrated with court ASR</td></tr>
+              </tbody>
+            </table>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 07 • Research Gap & Novelty",
+        title: "Research Gap and Proposed Solution",
+        subtitle: "What existing work misses and what is original in my work",
+        timing: "60 Seconds",
+        objective: "Deliver the 'What is original in my work' statement clearly.",
+        script: "Existing work misses the spoken multimedia dimension: legal NLP has focused almost exclusively on written Supreme Court judgements, while generative LLMs introduce dangerous hallucination risks. What is original in our work is three-fold: First, our Legal Domain Salience Booster, which weights judicial dispositions over advocate arguments. Second, our ablation study comparing translating first against summarizing in the original vernacular. And third, microsecond temporal traceability that links every summary sentence back to the video second.",
+        viva: "Reviewers always look for your specific technical contribution versus existing packages.",
+        html: `
+          <div class="grid-2">
+            <div class="feature-card danger">
+              <div class="card-title" style="color:#ef4444;">WHAT EXISTING WORK MISSES</div>
+              <ul class="card-list" style="margin-top:8px;">
+                <li><strong>Spoken Media Ignored:</strong> Legal NLP focuses only on written judgements, ignoring spoken courtroom video.</li>
+                <li><strong>Hallucination Danger:</strong> Generative LLMs hallucinate and turn unproven advocate claims into rulings.</li>
+                <li><strong>No Evidentiary Link:</strong> Summaries lack microsecond temporal links to the source audio.</li>
+                <li><strong>Regional Dialects Neglected:</strong> Generic models fail on code-switched Indian legal speech.</li>
+              </ul>
+            </div>
+            <div class="feature-card success">
+              <div class="card-title" style="color:#10b981;">WHAT IS ORIGINAL IN MY WORK (NOVELTY)</div>
+              <ul class="card-list" style="margin-top:8px;">
+                <li>⭐ <strong>Legal Cue Salience Booster:</strong> 4-tier statutory lexicon boosting rulings (2.5x) and penalizing allegations (0.85x), giving +8.2% F1 boost.</li>
+                <li>⭐ <strong>Translation vs Original Language Ablation:</strong> Empirical study comparing translating first vs summarizing in original vernacular.</li>
+                <li>⭐ <strong>Microsecond Temporal Anchors:</strong> Every sentence links directly to [start_time, end_time] with instant video scrubbing.</li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 08 • System Architecture",
+        title: "End-to-End System Architecture",
+        subtitle: "Video ➔ Audio extraction ➔ Preprocessing ➔ Whisper ASR ➔ Translation ➔ Segmentation ➔ 3 Summarizers ➔ UI",
+        timing: "60 Seconds",
+        objective: "Explain the clean horizontal flow from video input to UI delivery.",
+        script: "Here is our complete system architecture: Raw court video is demuxed via FFmpeg to 16 kHz mono WAV, normalized to -23 LUFS using EBU R128, and trimmed with conservative VAD. Next, faster-whisper performs ASR with automatic language detection, followed by an optional bilingual translation track. Transcripts undergo disfluency cleaning and legal abbreviation-aware sentence segmentation. Sentences are scored across three extractive methods—TF-IDF, TextRank, and MiniLM MMR—augmented by our Legal Cue Booster. Finally, chronologically ordered summaries with clickable timestamps are delivered via our Streamlit UI and FastAPI backend.",
+        viva: "Point to the horizontal flow: Video -> Audio -> Preprocessing -> ASR -> Translation -> Segmentation -> Summarization -> UI.",
+        html: `
+          <div style="display:flex; justify-content:center; align-items:center; height:100%; width:100%;">
+            <img src="presentation_assets/architecture_clean.png" class="img-showcase" alt="Architecture Diagram">
+          </div>
+        `
+      },
+      {
+        tag: "Slide 09 • Dataset Plan",
+        title: "Dataset Plan & Procedural Inventory",
+        subtitle: "Number of videos, languages, duration, sources, permissions, and reference annotations",
+        timing: "50 Seconds",
+        objective: "Detail the dataset plan, sources, permissions, and reference gold standards.",
+        script: "Our empirical testbed comprises 10 courtroom recordings totaling over 42 minutes across four languages: English, Hindi, Telugu, and Tamil. The corpus is split into 5 Development cases and 5 held-out Test cases. It captures realistic acoustic diversity: studio clean speech, historical 1952 reverberant mono in Parasakthi, and dynamic Indian trials like Naandhi. Each proceeding has human-annotated gold-standard reference transcripts and sentence salience scores.",
+        viva: "Highlight that all videos are used under academic fair use and open judicial research guidelines.",
+        html: `
+          <div style="height:100%; display:flex; flex-direction:column; justify-content:center; gap:10px;">
+            <table class="data-table">
+              <thead><tr><th>Case ID</th><th>Source Title</th><th>Language</th><th>Duration</th><th>Acoustic Quality</th><th>Split</th></tr></thead>
+              <tbody>
+                <tr><td>CASE_EN_01</td><td>My Cousin Vinny (1992)</td><td>English (EN)</td><td>154.0s</td><td>Studio clean; cross-examination</td><td>Dev</td></tr>
+                <tr><td>CASE_TE_01</td><td>Friendship (2022)</td><td>Telugu (TE)</td><td>309.1s</td><td>Dynamic score; fast trial dialogue</td><td>Test</td></tr>
+                <tr><td>CASE_TA_01</td><td>Parasakthi Classic (1952)</td><td>Tamil (TA)</td><td>299.0s</td><td>Historical mono; classic rhetoric</td><td>Dev</td></tr>
+                <tr><td>CASE_HI_01</td><td>Criminal Justice S3</td><td>Hindi (HI)</td><td>151.3s</td><td>Studio clean; electronic alibi bail</td><td>Dev</td></tr>
+                <tr><td>CASE_TE_02</td><td>Naandhi (2021)</td><td>Telugu (TE)</td><td>336.6s</td><td>Dramatic court; Section 211 motion</td><td>Test</td></tr>
+              </tbody>
+            </table>
+            <div class="grid-3" style="flex:none; height:auto;">
+              <div class="feature-card highlight"><div class="card-title">Corpus Size</div><div class="card-desc">10 Videos (42m 38s) across EN, HI, TE, TA</div></div>
+              <div class="feature-card success"><div class="card-title">Reference Truth</div><div class="card-desc">10 Gold Summaries with 0-3 salience tags</div></div>
+              <div class="feature-card warning"><div class="card-title">Permission</div><div class="card-desc">Open legal & educational archives under Fair Use</div></div>
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 10 • Methodology",
+        title: "Methodology & Sample Output Mock-Up",
+        subtitle: "Short explanation of each stage, the three summarizers, and our legal cue boost novelty",
+        timing: "60 Seconds",
+        objective: "Explain the three algorithms and walk through the sample input/output mockup.",
+        script: "We implement three extractive algorithms: Method A uses TF-IDF with opening and closing position priors. Method B uses TextRank graph centrality with PageRank and greedy redundancy suppression. Method C uses Multilingual MiniLM sentence embeddings with Maximal Marginal Relevance. Crucially, our Legal Domain Booster re-weights sentences. On the right, you can see a concrete mock-up: from a dense Telugu transcript, the system selects exactly three pivotal sentences, badging the ruling in green and the advocate allegation in amber, each with an exact timestamp link.",
+        viva: "Point to the right mockup: reviewers love concrete input/output demonstrations.",
+        html: `
+          <div class="grid-2">
+            <div class="feature-card highlight">
+              <div class="card-title">THE THREE SUMMARIZATION METHODS</div>
+              <ul class="card-list" style="margin-top:8px;">
+                <li><strong>Method A (TF-IDF + Position):</strong> Mean TF-IDF modulated by position priors P(i) boosting opening charges and closing dispositions.</li>
+                <li><strong>Method B (TextRank Graph):</strong> Cosine similarity sentence graph. PageRank (d=0.85) + redundancy penalty (μ=0.30) stops repetition.</li>
+                <li><strong>Method C (MiniLM MMR):</strong> 384-dim multilingual embeddings with MMR (λ=0.65) balancing trial relevance and diversity.</li>
+                <li><strong>Legal Cue Boost (Novelty):</strong> 2.5x disposition boost, 0.85x allegation penalty; sorted chronologically.</li>
+              </ul>
+            </div>
+            <div style="display:flex; justify-content:center;">
+              <img src="presentation_assets/sample_input_output.png" class="img-showcase" alt="Sample Mockup">
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 11 • Tools & Technologies",
+        title: "Tools, Frameworks & System Technologies",
+        subtitle: "Python, FFmpeg, Whisper/faster-whisper, scikit-learn, NetworkX, sentence-transformers, FastAPI, Streamlit",
+        timing: "45 Seconds",
+        objective: "Walk through the tech stack grid and emphasize CPU efficiency.",
+        script: "Our technology stack leverages standard Python 3.10 with FFmpeg for audio demuxing and EBU R128 loudness normalization. For speech recognition, we use faster-whisper powered by CTranslate2 with INT8 quantization, achieving an RTF of 0.049 on commodity CPU hardware. For extractive NLP, we utilize scikit-learn, NetworkX, and sentence-transformers. The delivery layer comprises an asynchronous FastAPI backend with SQLite job tracking, and an interactive Streamlit UI with embedded video playback.",
+        viva: "Emphasize that the entire pipeline runs locally on commodity CPU hardware without mandatory GPU dependencies.",
+        html: `
+          <div style="display:flex; justify-content:center; align-items:center; height:100%; width:100%;">
+            <img src="presentation_assets/tools_grid.png" class="img-showcase" alt="Tools Grid">
+          </div>
+        `
+      },
+      {
+        tag: "Slide 12 • Evaluation Plan",
+        title: "Evaluation Plan & Comparative Benchmark Results",
+        subtitle: "WER for ASR, ROUGE-1/2/L and BERTScore for summaries, planned ablations, and manual review",
+        timing: "60 Seconds",
+        objective: "Present the evaluation metrics and point out TextRank's dominance on the right chart.",
+        script: "We evaluate our system across both speech and summarization dimensions: WER for ASR, Sentence F1 for exact sentence overlap with human judges, and ROUGE-1/2/L and BERTScore for linguistic and semantic coverage. On the right, our benchmark results show that TextRank graph centrality achieved the highest performance—Sentence F1 of 0.614 and ROUGE-L of 0.518—outperforming TF-IDF and Embedding MMR. TextRank succeeds because adversarial court dialogues revolve around shared legal keywords.",
+        viva: "Mention the key finding: TextRank graph centrality leads on conversational courtroom text.",
+        html: `
+          <div class="grid-2">
+            <div class="feature-card highlight">
+              <div class="card-title">EVALUATION METRICS & ABLATIONS</div>
+              <ul class="card-list" style="margin-top:8px;">
+                <li><strong>ASR Metric:</strong> Word Error Rate (WER) and Character Error Rate (CER).</li>
+                <li><strong>Sentence F1:</strong> Exact sentence overlap with human-annotated gold summaries.</li>
+                <li><strong>ROUGE-1/2/L & BERTScore:</strong> Unigram, bigram, longest common subsequence, and vector similarity.</li>
+                <li><strong>Planned Ablations:</strong> 1. Legal booster ON vs OFF (+8.2% F1 boost); 2. Translating first vs original language; 3. Compression budget sensitivity (15%, 25%, 35%).</li>
+              </ul>
+            </div>
+            <div style="display:flex; justify-content:center;">
+              <img src="presentation_assets/benchmark_metrics_chart.png" class="img-showcase" alt="Benchmark Chart">
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 13 • Timeline",
+        title: "Work Plan and Phase-Wise Project Timeline",
+        subtitle: "Week-by-week Gantt chart showing Review 1 completed milestones and Review 2 & 3 targets",
+        timing: "50 Seconds",
+        objective: "Demonstrate clear phase-wise progress: Review 1 is DONE, Reviews 2 and 3 are planned.",
+        script: "This slide presents our 12-week work plan: In Weeks 1 to 4, we completed problem formulation, multilingual dataset collection, 16 kHz audio preprocessing, and Whisper ASR benchmarking—successfully fulfilling Review 1 requirements. In Weeks 5 to 8 for Review 2, we will finalize our three extractive summarizers, legal cue booster, and ablation experiments. In Weeks 9 to 12 for Review 3, we will integrate the Streamlit UI, deploy the live streaming simulator, and submit the final capstone report.",
+        viva: "Point to the Review 1 line: everything to the left is DONE; everything to the right is planned for Reviews 2 and 3.",
+        html: `
+          <div style="display:flex; justify-content:center; align-items:center; height:100%; width:100%;">
+            <img src="presentation_assets/timeline_gantt.png" class="img-showcase" alt="Timeline Gantt">
+          </div>
+        `
+      },
+      {
+        tag: "Slide 14 • Risks & Ethics",
+        title: "Expected Outcomes, Challenges and Ethics",
+        subtitle: "Working demo, benchmark results, risk mitigation table, and judicial safety constraints",
+        timing: "50 Seconds",
+        objective: "Highlight the Risk Mitigation Table and Ethical Safeguards.",
+        script: "Here are our expected outcomes, risk mitigations, and ethics: We deliver a working demo, benchmark report, and web interface. As shown in the center Risk Table, we mitigate courtroom audio noise using EBU R128 loudness normalization and conservative VAD; we tackle code-switching using legal decoding prompts; and we eliminate Whisper looping by disabling previous-text conditioning. Ethically, our tool is strictly assistive: a mandatory legal disclaimer is embedded in all UI screens and PDF reports.",
+        viva: "Point to the center card: reviewers love seeing that you have thought through technical risks.",
+        html: `
+          <div class="grid-3">
+            <div class="feature-card success">
+              <div class="card-title" style="color:#10b981;">EXPECTED OUTCOMES</div>
+              <ul class="card-list" style="margin-top:6px;">
+                <li>Working end-to-end ASR + extractive pipeline.</li>
+                <li>Benchmark comparative report across 3 methods.</li>
+                <li>Streamlit UI with synchronized video scrubbing.</li>
+                <li>Multi-format report exports (TXT, JSON, PDF).</li>
+              </ul>
+            </div>
+            <div class="feature-card warning">
+              <div class="card-title" style="color:#f59e0b;">CHALLENGES & MITIGATIONS</div>
+              <ul class="card-list" style="margin-top:6px;">
+                <li><strong>Noisy audio:</strong> EBU R128 norm (-23 LUFS) + VAD.</li>
+                <li><strong>Regional slang:</strong> Legal domain prompt + Whisper.</li>
+                <li><strong>Code-switching:</strong> Bilingual Unicode token lock.</li>
+                <li><strong>Whisper looping:</strong> condition_on_previous_text=False.</li>
+              </ul>
+            </div>
+            <div class="feature-card danger">
+              <div class="card-title" style="color:#ef4444;">ETHICAL SAFEGUARDS</div>
+              <ul class="card-list" style="margin-top:6px;">
+                <li><strong>Assistive Only:</strong> Cannot replace judges or lawyers.</li>
+                <li><strong>Verbatim Lock:</strong> Zero generative synthesis.</li>
+                <li><strong>Fair-Use Data:</strong> Open educational court archives.</li>
+                <li><strong>Permanent Disclaimer:</strong> Embedded on UI & PDF.</li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 15 • Conclusion",
+        title: "Conclusion and Future Work",
+        subtitle: "3-line summary of contributions, plus future ideas including speaker diarization and live mode",
+        timing: "50 Seconds",
+        objective: "Deliver a clean 3-line conclusion and outline future work with confidence.",
+        script: "In conclusion: 1. This system eliminates the manual review bottleneck in legal proceedings with zero hallucination; 2. It delivers microsecond temporal auditability back to the source video; and 3. Our legal domain booster produces an 8.2% F1 gain. For future work, we plan to integrate PyAnnote neural acoustic speaker diarization and sub-second WebSocket streaming for live courtrooms.",
+        viva: "Conclude clearly within your allocated time.",
+        html: `
+          <div class="grid-2">
+            <div class="feature-card success">
+              <div class="card-title" style="color:#10b981;">PROJECT CONCLUSION (3 TAKEAWAYS)</div>
+              <ul class="card-list" style="margin-top:10px;">
+                <li>✅ <strong>1. Solves Review Bottleneck:</strong> Converts hours of courtroom video into concise summaries with zero hallucination.</li>
+                <li>✅ <strong>2. Temporal Traceability:</strong> Every extracted sentence links to its exact [start_time, end_time] video offset.</li>
+                <li>✅ <strong>3. Proven Domain Novelty:</strong> Statutory cue weighting yields an 8.2% Sentence F1 gain, prioritizing rulings.</li>
+              </ul>
+            </div>
+            <div class="feature-card highlight">
+              <div class="card-title" style="color:#38bdf8;">FUTURE WORK & EXPANSIONS</div>
+              <ul class="card-list" style="margin-top:10px;">
+                <li>🚀 <strong>Neural Speaker Diarization:</strong> Integrate PyAnnote to tag [JUDGE] vs [ADVOCATE] directly from voice acoustics.</li>
+                <li>🚀 <strong>WebSocket Live Streaming:</strong> Full-duplex live mode for active courtroom proceedings.</li>
+                <li>🚀 <strong>Offline Consistency Auditor:</strong> Quantized SLM to cross-audit factual fidelity without generative risks.</li>
+              </ul>
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: "Slide 16 • References",
+        title: "References and Thank You",
+        subtitle: "IEEE-style academic citations supporting the speech, graph, and legal NLP methodology",
+        timing: "30 Seconds",
+        objective: "Conclude with humility, state citations, and invite questions.",
+        script: "Here are our primary academic citations. Thank you very much for your time and guidance. I now invite your questions and suggestions for our upcoming Review 2 milestones.",
+        viva: "Stand upright, make eye contact, and wait for reviewer questions.",
+        html: `
+          <div class="grid-2">
+            <div class="feature-card highlight">
+              <div class="card-title">IEEE-STYLE ACADEMIC REFERENCES</div>
+              <ul class="card-list" style="margin-top:6px; font-size:10px;">
+                <li>[1] A. Radford et al., "Robust Speech Recognition via Weak Supervision (Whisper)," in ICML, 2023.</li>
+                <li>[2] R. Mihalcea & P. Tarau, "TextRank: Bringing Order into Text," in EMNLP, 2004.</li>
+                <li>[3] N. Reimers & I. Gurevych, "Sentence-BERT Embeddings," in EMNLP, 2019.</li>
+                <li>[4] P. Bhattacharya et al., "Legal Case Document Summarization," Artif. Intell. Law, 2021.</li>
+                <li>[5] J. Carbonell & J. Goldstein, "Maximal Marginal Relevance," in ACM SIGIR, 1998.</li>
+                <li>[6] C.-Y. Lin, "ROUGE: Package for Automatic Evaluation of Summaries," in ACL, 2004.</li>
+              </ul>
+            </div>
+            <div class="feature-card warning" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+              <h2 style="font-size:24px; color:#f59e0b; margin-bottom:8px;">THANK YOU!</h2>
+              <p style="font-size:13px; font-weight:700; color:white; margin-bottom:12px;">Questions & Reviewer Feedback Welcome</p>
+              <div style="font-size:11px; color:#94a3b8; line-height:1.6;">
+                <strong>Aravind S [Your Name]</strong><br>
+                B.Tech CSE (AI & ML) • VIT Chennai<br>
+                Speech and Language Processing • Review 1
+              </div>
+            </div>
+          </div>
+        `
+      }
+    ];
+
+    let currentSlide = 0;
+    const canvas = document.getElementById('slideCanvas');
+    const select = document.getElementById('slideSelect');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const timingBadge = document.getElementById('slideTiming');
+    const objectiveBox = document.getElementById('slideObjective');
+    const scriptBox = document.getElementById('slideScript');
+    const vivaBox = document.getElementById('slideViva');
+    const notesSidebar = document.getElementById('notesSidebar');
+    const toggleNotesBtn = document.getElementById('toggleNotesBtn');
+
+    slidesData.forEach((s, idx) => {
+      const opt = document.createElement('option');
+      opt.value = idx;
+      opt.textContent = `Slide ${idx + 1}: ${s.title.substring(0, 32)}...`;
+      select.appendChild(opt);
+    });
+
+    function renderSlide(idx) {
+      currentSlide = idx;
+      const data = slidesData[idx];
+      select.value = idx;
+
+      canvas.innerHTML = `
+        <div>
+          <div class="slide-tag">${data.tag}</div>
+          <h2 class="slide-title">${data.title}</h2>
+          <div class="slide-subtitle">${data.subtitle}</div>
+        </div>
+        <div class="slide-body">
+          ${data.html}
+        </div>
+        <div class="slide-footer">
+          <div>🏛️ VIT Chennai • CSE (AI & ML) • Review 1</div>
+          <div>Slide <strong style="color:var(--accent-blue);">${idx + 1}</strong> of ${slidesData.length}</div>
+        </div>
+      `;
+
+      timingBadge.textContent = `⏱ ${data.timing}`;
+      objectiveBox.textContent = data.objective;
+      scriptBox.textContent = `"${data.script}"`;
+      vivaBox.textContent = data.viva;
+    }
+
+    prevBtn.addEventListener('click', () => { if (currentSlide > 0) renderSlide(currentSlide - 1); });
+    nextBtn.addEventListener('click', () => { if (currentSlide < slidesData.length - 1) renderSlide(currentSlide + 1); });
+    select.addEventListener('change', (e) => { renderSlide(parseInt(e.target.value)); });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        if (currentSlide < slidesData.length - 1) renderSlide(currentSlide + 1);
+      } else if (e.key === 'ArrowLeft') {
+        if (currentSlide > 0) renderSlide(currentSlide - 1);
+      }
+    });
+
+    toggleNotesBtn.addEventListener('click', () => {
+      if (notesSidebar.style.display === 'none') {
+        notesSidebar.style.display = 'flex';
+        document.querySelector('.main-container').style.gridTemplateColumns = '1fr 380px';
+      } else {
+        notesSidebar.style.display = 'none';
+        document.querySelector('.main-container').style.gridTemplateColumns = '1fr';
+      }
+    });
+
+    renderSlide(0);
+  </script>
+</body>
+</html>

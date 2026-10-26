@@ -1,0 +1,16 @@
+===========================================================================
+COURT PROCEEDING EXTRACTIVE SUMMARY REPORT
+Case / Recording: ఈ court scene లో ఇన్ని ట్విస్టులా _ _ ahavideoIN 📺 DJ Tillu _ Siddu Jonnalagadda _ Neha Shetty
+Detected Language: TE (95.0% confidence)
+Duration: 285.21s | Method: TextRank Graph Centrality Summarizer
+DISCLAIMER: This extractive summary is an assistive reference tool for academic and
+research purposes only. Verify all statements against the original video recordings.
+===========================================================================
+
+--- KEY CHRONOLOGICAL COURT MOMENTS ---
+
+1. [210.5s - 224.8s] [JUDICIAL_RULING]
+   Summary (English): Having heard the arguments of both parties, the Court hereby reserves the matter for further documentary evidence and orders the accused remanded to judicial custody.
+   Original (TE):  ఇరు పక్షాల వాదనలు విన్న తర్వాత, న్యాయస్థానం ఈ కేసును తదుపరి సాక్ష్యాధారాల పరిశీలన నిమిత్తం వాయిదా వేస్తూ తీర్పునిచ్చింది.
+   Salience Score: 0.2731
+

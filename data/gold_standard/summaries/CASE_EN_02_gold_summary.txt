@@ -1,0 +1,6 @@
+[008.0s - 015.2s] Judge Laura Burch (CHARGES_FRAMED): Mr. Clyde Shelton, you stand before this court charged with aggravated homicide and conspiracy.
+[015.8s - 026.5s] Prosecutor Nick Rice (BAIL_OPPOSITION): The Commonwealth requests bail be denied outright; the defendant represents an extraordinary flight risk and an active danger to society.
+[027.2s - 044.0s] Clyde Shelton (LEGAL_SUBMISSION): Your Honor, the prosecution's entire petition relies upon circumstantial conjecture and precedent established in State v. Stewart, which requires tangible physical evidence before revoking pretrial liberty.
+[045.0s - 058.5s] Judge Laura Burch (JUDICIAL_OBSERVATION): I find the defense argument persuasive on strict statutory grounds, and under normal procedure I would have been inclined to set bail at five hundred thousand dollars.
+[059.0s - 075.0s] Clyde Shelton (IN-COURT_CONFESSION): Would you really let me walk out of here on bail when I just confessed to butchering a man with my bare hands?
+[076.0s - 088.0s] Judge Laura Burch (JUDICIAL_RULING): I hold you in direct contempt of court; bail is formally revoked and you will be remanded to maximum security custody immediately.

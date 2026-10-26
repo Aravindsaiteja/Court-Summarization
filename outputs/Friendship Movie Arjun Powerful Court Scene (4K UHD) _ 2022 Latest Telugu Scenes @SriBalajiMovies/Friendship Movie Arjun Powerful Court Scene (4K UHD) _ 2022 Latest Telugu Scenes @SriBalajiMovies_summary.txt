@@ -1,0 +1,16 @@
+===========================================================================
+COURT PROCEEDING EXTRACTIVE SUMMARY REPORT
+Case / Recording: Friendship Movie Arjun Powerful Court Scene (4K UHD) _ 2022 Latest Telugu Scenes @SriBalajiMovies
+Detected Language: TE (90.0% confidence)
+Duration: 309.06s | Method: TextRank Graph Centrality Summarizer
+DISCLAIMER: This extractive summary is an assistive reference tool for academic and
+research purposes only. Verify all statements against the original video recordings.
+===========================================================================
+
+--- KEY CHRONOLOGICAL COURT MOMENTS ---
+
+1. [304.3s - 305.9s] [JUDICIAL_RULING]
+   Summary (English): The Court has examined all documentary exhibits and hereby directs the continuation of trial.
+   Original (TE):  న్యాయస్థానం అన్ని సాక్ష్యాధారాలను పరిశీలించి తదుపరి విచారణకు ఆదేశిస్తుంది.
+   Salience Score: 0.4995
+

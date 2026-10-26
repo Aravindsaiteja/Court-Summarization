@@ -1,0 +1,16 @@
+===========================================================================
+COURT PROCEEDING EXTRACTIVE SUMMARY REPORT
+Case / Recording: CASE_TE_02
+Detected Language: TE (96.5% confidence)
+Duration: 336.57s | Method: TextRank Graph Centrality Summarizer
+DISCLAIMER: This extractive summary is an assistive reference tool for academic and
+research purposes only. Verify all statements against the original video recordings.
+===========================================================================
+
+--- KEY CHRONOLOGICAL COURT MOMENTS ---
+
+1. [071.0s - 095.0s] [JUDICIAL_RULING]
+   Summary (English): The Court hereby orders a departmental and criminal inquiry under Section 211 against the investigating officers found guilty.
+   Original (TE):  న్యాయస్థానం సెక్షన్ 211 క్రింద దోషులైన దర్యాప్తు అధికారులపై శాఖాపరమైన మరియు క్రిమినల్ విచారణకు ఆదేశిస్తుంది.
+   Salience Score: 20.8695
+

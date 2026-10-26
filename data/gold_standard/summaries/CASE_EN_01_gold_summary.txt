@@ -1,0 +1,6 @@
+[004.5s - 010.2s] Vinny Gambini (EVIDENTIARY_QUESTION): Miss Vito, with your extensive experience in automotive mechanics, could you explain the tire tracks found at the Sac-O-Suds convenience store?
+[010.8s - 024.5s] Mona Lisa Vito (EXPERT_TESTIMONY): The tire marks left by the getaway vehicle show two distinct dual-track markings made by a car with an independent rear suspension and a positraction differential.
+[025.1s - 035.8s] Mona Lisa Vito (EXCULPATORY_EVIDENCE): A 1964 Buick Skylark, which the defendants were driving, has a solid rear axle and could never make those symmetrical marks.
+[042.5s - 048.1s] Judge Chamberlain Haller (JUDICIAL_RULING): Overruled, the witness has qualified as an expert in automotive mechanics and will continue.
+[048.5s - 062.4s] Mona Lisa Vito (CONCLUSIVE_EVIDENCE): Only two cars made by General Motors had that specific track width and independent suspension: the 1963 Pontiac Tempest and the Chevrolet Corvette.
+[063.0s - 071.2s] Prosecutor Jim Trotter (DISMISSAL_MOTION): In light of this ballistic and mechanical evidence, the State respectfully moves to dismiss all charges against the defendants.

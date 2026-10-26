@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+.cache/
+.pytest_cache/
+nltk_data/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Multimedia Data & Temporary Chunks
+outputs/temp_audio/
+outputs/temp_uploads/
+outputs/temp_live_chunks/
+data/preprocessed_audio/
+data/extracted_audio/
+*.wav
+*.db
+*.sqlite3
+*.log
+
+# Operating System
+.DS_Store
+Thumbs.db
+

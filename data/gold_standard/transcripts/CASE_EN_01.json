@@ -1,0 +1,84 @@
+{
+  "case_id": "CASE_EN_01",
+  "source_title": "My Cousin Vinny (1992)",
+  "language": "en",
+  "sentences": [
+    {
+      "sentence_id": 1,
+      "speaker": "Vinny Gambini",
+      "speaker_role": "Defense Counsel",
+      "start_time": 4.5,
+      "end_time": 10.2,
+      "text": "Miss Vito, with your extensive experience in automotive mechanics, could you explain the tire tracks found at the Sac-O-Suds convenience store?",
+      "salience_score": 2,
+      "category": "EVIDENTIARY_QUESTION",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 2,
+      "speaker": "Mona Lisa Vito",
+      "speaker_role": "Expert Witness",
+      "start_time": 10.8,
+      "end_time": 24.5,
+      "text": "The tire marks left by the getaway vehicle show two distinct dual-track markings made by a car with an independent rear suspension and a positraction differential.",
+      "salience_score": 3,
+      "category": "EXPERT_TESTIMONY",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 3,
+      "speaker": "Mona Lisa Vito",
+      "speaker_role": "Expert Witness",
+      "start_time": 25.1,
+      "end_time": 35.8,
+      "text": "A 1964 Buick Skylark, which the defendants were driving, has a solid rear axle and could never make those symmetrical marks.",
+      "salience_score": 3,
+      "category": "EXCULPATORY_EVIDENCE",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 4,
+      "speaker": "Prosecutor Jim Trotter",
+      "speaker_role": "Prosecutor",
+      "start_time": 36.2,
+      "end_time": 42.0,
+      "text": "Objection your honor, this testimony is speculative and uncorroborated by state forensics.",
+      "salience_score": 1,
+      "category": "OBJECTION",
+      "in_gold_summary": false
+    },
+    {
+      "sentence_id": 5,
+      "speaker": "Judge Chamberlain Haller",
+      "speaker_role": "Judge",
+      "start_time": 42.5,
+      "end_time": 48.1,
+      "text": "Overruled, the witness has qualified as an expert in automotive mechanics and will continue.",
+      "salience_score": 2,
+      "category": "JUDICIAL_RULING",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 6,
+      "speaker": "Mona Lisa Vito",
+      "speaker_role": "Expert Witness",
+      "start_time": 48.5,
+      "end_time": 62.4,
+      "text": "Only two cars made by General Motors had that specific track width and independent suspension: the 1963 Pontiac Tempest and the Chevrolet Corvette.",
+      "salience_score": 3,
+      "category": "CONCLUSIVE_EVIDENCE",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 7,
+      "speaker": "Prosecutor Jim Trotter",
+      "speaker_role": "Prosecutor",
+      "start_time": 63.0,
+      "end_time": 71.2,
+      "text": "In light of this ballistic and mechanical evidence, the State respectfully moves to dismiss all charges against the defendants.",
+      "salience_score": 3,
+      "category": "DISMISSAL_MOTION",
+      "in_gold_summary": true
+    }
+  ]
+}

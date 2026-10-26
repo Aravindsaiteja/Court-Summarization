@@ -1,0 +1,62 @@
+{
+  "case_id": "CASE_EN_03",
+  "source_title": "Legally Blonde (2001)",
+  "language": "en",
+  "sentences": [
+    {
+      "sentence_id": 1,
+      "speaker": "Elle Woods",
+      "speaker_role": "Defense Counsel",
+      "start_time": 10.0,
+      "end_time": 22.0,
+      "text": "Ms. Windham, on the morning of your father's murder, you stated under sworn oath that you were in the shower during the gunshots.",
+      "salience_score": 2,
+      "category": "CROSS_EXAMINATION",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 2,
+      "speaker": "Chutney Windham",
+      "speaker_role": "Witness",
+      "start_time": 22.5,
+      "end_time": 30.0,
+      "text": "Yes, I got a perm that morning and was washing my hair in the master bath.",
+      "salience_score": 2,
+      "category": "WITNESS_ALIBI",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 3,
+      "speaker": "Elle Woods",
+      "speaker_role": "Defense Counsel",
+      "start_time": 31.0,
+      "end_time": 45.0,
+      "text": "Anyone who has ever gotten a perm knows that washing your hair within forty-eight hours deactivates the ammonium thioglycolate and destroys the curls.",
+      "salience_score": 3,
+      "category": "EXPERT_REFUTATION",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 4,
+      "speaker": "Chutney Windham",
+      "speaker_role": "Witness",
+      "start_time": 46.0,
+      "end_time": 56.0,
+      "text": "I didn't mean to shoot him, I thought it was Brooke walking through the door!",
+      "salience_score": 3,
+      "category": "IN-COURT_CONFESSION",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 5,
+      "speaker": "Judge",
+      "speaker_role": "Judge",
+      "start_time": 57.0,
+      "end_time": 68.0,
+      "text": "Bailiff, arrest that witness for first-degree murder; the defendant Brooke Windham is acquitted and free to go.",
+      "salience_score": 3,
+      "category": "JUDICIAL_DISPOSITION",
+      "in_gold_summary": true
+    }
+  ]
+}

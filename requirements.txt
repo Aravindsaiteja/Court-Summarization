@@ -1,0 +1,42 @@
+# Core Dependencies for Multilingual Court Proceeding Summarizer
+# Python 3.10+ Compatibility
+
+# Audio and Signal Processing
+soundfile==0.14.0
+numpy==2.2.6
+scipy==1.15.3
+
+# Speech Recognition (ASR)
+faster-whisper==1.2.1
+ctranslate2==4.8.3
+openai-whisper==20250625
+onnxruntime==1.23.2
+
+# NLP & Machine Learning
+nltk==3.10.3
+scikit-learn==1.7.2
+networkx==3.4.2
+sentence-transformers==6.1.0
+torch==2.13.0
+transformers==5.17.0
+
+# Evaluation Metrics
+jiwer==4.0.0
+rouge-score==0.1.2
+bert-score==0.3.13
+
+# Web Application & REST API
+fastapi==0.141.1
+uvicorn==0.52.4
+pydantic==2.13.5
+python-multipart==0.0.32
+streamlit==1.62.0
+
+# PDF Generation & Data Serialization
+reportlab==5.0.0
+pyyaml==6.0.3
+pandas==2.3.3
+psutil==7.2.2
+
+# Testing & Quality Assurance
+pytest==9.1.1

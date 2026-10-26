@@ -1,0 +1,51 @@
+{
+  "case_id": "CASE_TE_02",
+  "source_title": "Naandhi (2021 Section 211 IPC Case)",
+  "language": "te",
+  "sentences": [
+    {
+      "sentence_id": 1,
+      "speaker": "Advocate Aadhya",
+      "speaker_role": "Defense Counsel",
+      "start_time": 15.0,
+      "end_time": 32.0,
+      "text": "సెక్షన్ 211 ఐపీసీ ప్రకారం నిరపరాధిపై తప్పుడు కేసు బనాయించి జైలులో ఉంచిన అధికారులపై విచారణ జరగాలి.",
+      "salience_score": 3,
+      "category": "STATUTORY_MOTION",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 2,
+      "speaker": "Public Prosecutor",
+      "speaker_role": "Prosecution",
+      "start_time": 33.0,
+      "end_time": 48.0,
+      "text": "పోలీస్ డిపార్ట్మెంట్ కేవలం ప్రాథమిక ఆధారాల ప్రకారమే దర్యాప్తు నిర్వహించింది తప్ప ఇందులో వ్యక్తిగత కక్ష లేదు.",
+      "salience_score": 2,
+      "category": "STATE_DEFENSE",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 3,
+      "speaker": "Advocate Aadhya",
+      "speaker_role": "Defense Counsel",
+      "start_time": 49.0,
+      "end_time": 70.0,
+      "text": "ఎనిమిది సంవత్సరాల అన్యాయమైన నిర్బంధానికి పరిహారంగా రాష్ట్ర ప్రభుత్వం బాధితుడికి న్యాయం చేయాల్సిందే.",
+      "salience_score": 3,
+      "category": "CONSTITUTIONAL_REMEDY",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 4,
+      "speaker": "Judge",
+      "speaker_role": "Judge",
+      "start_time": 71.0,
+      "end_time": 95.0,
+      "text": "న్యాయస్థానం సెక్షన్ 211 క్రింద దోషులైన దర్యాప్తు అధికారులపై శాఖాపరమైన మరియు క్రిమినల్ విచారణకు ఆదేశిస్తుంది.",
+      "salience_score": 3,
+      "category": "JUDICIAL_DISPOSITION",
+      "in_gold_summary": true
+    }
+  ]
+}

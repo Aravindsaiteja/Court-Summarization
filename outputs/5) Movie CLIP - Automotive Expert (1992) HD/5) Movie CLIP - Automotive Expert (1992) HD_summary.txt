@@ -1,0 +1,43 @@
+===========================================================================
+COURT PROCEEDING EXTRACTIVE SUMMARY REPORT
+Case / Recording: 5) Movie CLIP - Automotive Expert (1992) HD
+Detected Language: EN (99.2% confidence)
+Duration: 153.97s | Method: TextRank Graph Centrality Summarizer
+DISCLAIMER: This extractive summary is an assistive reference tool for academic and
+research purposes only. Verify all statements against the original video recordings.
+===========================================================================
+
+--- KEY CHRONOLOGICAL COURT MOMENTS ---
+
+1. [010.6s - 016.2s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): But there's been an ex-makantic necessarily qualified you as me an expert on tire marks.
+   Salience Score: 0.0347
+
+2. [026.0s - 030.8s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): Miss Vito's expertise is in general automotive knowledge.
+   Salience Score: 0.0451
+
+3. [033.8s - 040.8s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): Now, if mr. Trough had wishes to avoid diet or witness as to the extent of her expertise in this area,
+   Salience Score: 0.0282
+
+4. [052.1s - 060.9s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): Now, mr. Vito, be an expert on general automotive knowledge.
+   Salience Score: 0.0416
+
+5. [074.8s - 076.6s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): It's a bullshit question.
+   Salience Score: 0.0656
+
+6. [083.4s - 085.2s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): Nobody could answer that question.
+   Salience Score: 0.0652
+
+7. [094.5s - 096.9s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): Why is it a trick question?
+   Salience Score: 0.0448
+
+8. [115.4s - 122.2s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): Well, she's acceptable in your own way.
+   Salience Score: 0.0243
+

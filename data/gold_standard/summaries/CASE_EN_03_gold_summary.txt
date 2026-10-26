@@ -1,0 +1,5 @@
+[010.0s - 022.0s] Elle Woods (CROSS_EXAMINATION): Ms. Windham, on the morning of your father's murder, you stated under sworn oath that you were in the shower during the gunshots.
+[022.5s - 030.0s] Chutney Windham (WITNESS_ALIBI): Yes, I got a perm that morning and was washing my hair in the master bath.
+[031.0s - 045.0s] Elle Woods (EXPERT_REFUTATION): Anyone who has ever gotten a perm knows that washing your hair within forty-eight hours deactivates the ammonium thioglycolate and destroys the curls.
+[046.0s - 056.0s] Chutney Windham (IN-COURT_CONFESSION): I didn't mean to shoot him, I thought it was Brooke walking through the door!
+[057.0s - 068.0s] Judge (JUDICIAL_DISPOSITION): Bailiff, arrest that witness for first-degree murder; the defendant Brooke Windham is acquitted and free to go.

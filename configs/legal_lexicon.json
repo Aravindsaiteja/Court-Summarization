@@ -1,0 +1,120 @@
+{
+  "system_info": {
+    "title": "Multilingual Court Lexicon and Rule-Based Weights",
+    "version": "1.0.0",
+    "description": "Domain-specific cue phrases, statutory markers, and evidentiary triggers across English, Hindi, Telugu, and Tamil for legal salience boosting."
+  },
+  "cue_categories": {
+    "ruling_and_disposition": {
+      "weight": 5.0,
+      "description": "Definitive judicial determinations, rulings, orders, and verdicts delivered by the judge after hearing both parties.",
+      "phrases": {
+        "en": [
+          "held", "ruled", "orders", "ordered", "verdict", "bail granted", "bail denied",
+          "acquitted", "convicted", "sentenced", "judgment", "decree", "overruled",
+          "sustained", "court finds", "it is hereby ordered", "prima facie", "guilty", "not guilty",
+          "the court orders", "the court finds", "the court rules", "the court observes",
+          "the court directs", "the court holds", "the court hereby", "order of the court",
+          "after hearing both parties", "having heard both sides", "having heard both parties",
+          "having heard the learned counsel", "after hearing arguments", "court directs",
+          "interim order", "final order", "disposed of", "remanded to custody", "remanded",
+          "stand adjourned", "case is adjourned", "matter is adjourned", "case is dismissed",
+          "punishment", "fine of", "in view of the above", "in the judgment",
+          "directs the prosecution", "directs the defense", "bail is rejected",
+          "bail is granted", "court is pleased to order"
+        ],
+        "hi": [
+          "आदेश दिया जाता है", "फैसला", "निर्णय", "जमानत मंजूर", "जमानत खारिज",
+          "दोषी करार", "बरी किया जाता है", "सजा सुनाई जाती है", "अदालत का मानना है",
+          "खारिज किया जाता है", "स्वीकार किया जाता है", "दोनों पक्षों की दलीलें", "बहस सुनने के बाद",
+          "अदालत आदेश देती है", "मुचलके पर", "रिमांड", "हुक्म", "सुनाई गई",
+          "तारीख तय", "गवाहों के बयान", "सबूतों के आधार पर"
+        ],
+        "te": [
+          "తీర్పు", "తీర్పు వెలువరించింది", "తీర్పునిచ్చింది", "తీర్పు ప్రకటిస్తున్నాం",
+          "కోర్టు ఆదేశం", "కోర్టు తీర్పు", "కోర్టు ఆదేశిస్తుంది", "కోర్టు ఆదేశించింది",
+          "న్యాయస్థానం ఆదేశిస్తుంది", "న్యాయస్థానం ఆదేశించింది", "బెయిల్ మంజూరు",
+          "బెయిల్ తిరస్కరించబడింది", "బెయిల్ రద్దు", "దోషిగా నిర్ధారణ", "నిర్దోషిగా విడుదల",
+          "శిక్ష ఖరారు", "వాయిదా వేస్తూ", "వాయిదా పడింది", "సాక్ష్యాధారాలు పరిశీలించి",
+          "ఇరు పక్షాల వాదనలు", "ఉభయ పక్షాల వాదనలు", "వాదనలు విన్న తర్వాత",
+          "పరిశీలించిన తర్వాత", "ఆదేశిస్తుంది", "ఆదేశించింది", "ఆదేశిస్తున్నాం",
+          "జరిమానా", "రిమాండ్", "కేసు కొట్టివేత", "తదుపరి విచారణ", "చట్ట ప్రకారం"
+        ],
+        "ta": [
+          "தீர்ப்பு", "உத்தரவு", "நீதிமன்றம் உத்தரவிடுகிறது", "நீதிமன்ற உத்தரவு",
+          "ஜாமீன் வழங்கப்பட்டது", "ஜாமீன் மறுக்கப்பட்டது", "குற்றவாளி என தீர்மானிக்கப்பட்டது",
+          "விடுதலை", "தண்டனை", "வழக்கு தள்ளுபடி", "இரு தரப்பு வாதங்களையும்",
+          "ஒத்திவைக்கப்படுகிறது", "ஆதாரங்களின் அடிப்படையில்", "தீர்ப்பளிக்கப்படுகிறது"
+        ]
+      }
+    },
+    "evidence_and_testimony": {
+      "weight": 1.8,
+      "description": "Witness testimony, cross-examination reveals, forensic reports, and physical exhibits.",
+      "phrases": {
+        "en": [
+          "evidence shows", "witness testifies", "exhibit", "forensic report", "post-mortem",
+          "confession", "under cross-examination", "under oath", "perjury", "tire marks",
+          "fingerprints", "call records", "cctv footage", "eyewitness", "documentary proof"
+        ],
+        "hi": [
+          "सबूत", "गवाह", "गवाही", "फॉरेंसिक रिपोर्ट", "पोस्टमार्टम", "बयान", "हलफनामा",
+          "सबूत के आधार पर", "क्रॉस एग्जामिनेशन", "कॉल डिटेल", "सीसीटीवी फुटेज"
+        ],
+        "te": [
+          "సాక్ష్యం", "సాక్షి", "సాక్ష్యాలు", "నివేదిక", "వాంగ్మూలం", "పోస్టుమార్టం",
+          "కాల్ రికార్డులు", "సిసిటివి ఫుటేజ్", "దర్యాప్తు అధికారి"
+        ],
+        "ta": [
+          "சாட்சி", "சாட்சியம்", "ஆதாரம்", "தடையவியல் அறிக்கை", "பிரேத பரிசோதனை",
+          "வாக்குமூலம்", "விசாரணை அதிகாரி"
+        ]
+      }
+    },
+    "statutory_and_procedural": {
+      "weight": 1.6,
+      "description": "Legal sections, codes, constitutional articles, and procedural submissions.",
+      "phrases": {
+        "en": [
+          "section", "ipc", "crpc", "cpc", "article", "constitution", "charge sheet",
+          "fir", "cognizable", "anticipatory bail", "quash", "petition", "respondent", "petitioner"
+        ],
+        "hi": [
+          "धारा", "आईपीसी", "सीआरपीसी", "संविधान", "चार्जशीट", "प्राथमिकी", "याचिका", "अनुच्छेद"
+        ],
+        "te": [
+          "సెక్షన్", "ఐపిసి", "సిఆర్‌పిసి", "ఛార్జ్ షీట్", "ఎఫ్ఐఆర్", "పిటిషన్", "రాజ్యాంగం"
+        ],
+        "ta": [
+          "பிரிவு", "சட்டப்பிரிவு", "ஐபிசி", "முதல் தகவல் அறிக்கை", "மனு", "அரசியலமைப்பு"
+        ]
+      }
+    },
+    "allegations_and_arguments": {
+      "weight": 0.8,
+      "is_allegation": true,
+      "description": "Claims made by prosecution or defense that must not be misrepresented as judicial facts.",
+      "phrases": {
+        "en": [
+          "alleges", "alleged", "prosecution claims", "defense argues", "contends that",
+          "it is submitted that", "accused claims", "suspected of", "theory of the case"
+        ],
+        "hi": [
+          "आरोप है", "अभियोजन का दावा", "दलील है", "दावा किया गया है", "कथित रूप से"
+        ],
+        "te": [
+          "ఆరోపణ", "వాదన", "ప్రాసిక్యూషన్ ఆరోపిస్తోంది", "నిందితుడి వాదన", "చెబుతున్నారు"
+        ],
+        "ta": [
+          "குற்றச்சாட்டு", "வாதம்", "அரசு தரப்பு வாதம்", "எதிர் தரப்பு வாதம்"
+        ]
+      }
+    }
+  },
+  "negation_tokens": {
+    "en": ["not", "never", "no", "neither", "nor", "nowhere", "hardly", "scarcely", "cannot", "failed to"],
+    "hi": ["नहीं", "ना", "मत", "कदापि नहीं", "असमर्थ"],
+    "te": ["కాదు", "లేదు", "చేయలేదు", "కాలేదు", "నిరాకరించారు"],
+    "ta": ["இல்லை", "அல்ல", "செய்யவில்லை", "கிடையாது", "மறுத்தார்"]
+  }
+}

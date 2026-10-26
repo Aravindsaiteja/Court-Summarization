@@ -1,0 +1,41 @@
+===========================================================================
+COURT PROCEEDING EXTRACTIVE SUMMARY REPORT
+Case / Recording: Parasakthi - Court Scene
+Detected Language: TA (78.1% confidence)
+Duration: 298.96s | Method: TextRank Graph Centrality Summarizer
+DISCLAIMER: This extractive summary is an assistive reference tool for academic and
+research purposes only. Verify all statements against the original video recordings.
+===========================================================================
+
+--- KEY CHRONOLOGICAL COURT MOMENTS ---
+
+1. [003.8s - 005.5s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): You will not be asked to read the evidence.
+   Original (TA):  You didn't say, you didn't say!
+   Salience Score: 0.0672
+
+2. [092.0s - 094.0s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): and our family,
+   Original (TA):  பிடக்கு ஒரு நாட்டு, பிடக்கு ஒரு நாட்டு,
+   Salience Score: 0.0657
+
+3. [134.9s - 166.0s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): You know, this is how you get asked now.
+   Original (TA):  கல்யாணி அலைந்தார் கல்யாணிச்சாக நான் அலைந்தார் கல்யாணிச்சாக நான் அலைந்தார் கல்யாணிச்சாக நான் அலைந்தார் கல்யாணிச்சாக நான் அலைந்தார் கல்யாணிச்சாகக் கல்யாணிச்சாகக் கல்யாணிச்சாகக் கல்யாணிச்சாகக் கல்யாணிச்சாகக் கல்யாணிச்சாகக் கல்யாணிச்சாகக் கல்யாணிச்
+   Salience Score: 0.0374
+
+4. [166.0s - 168.3s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): It was his duty to play the main role.
+   Original (TA):  நல்லும் மாதவரை வந்தெருச் சத்துகிறு என்ன பேரால்.
+   Salience Score: 0.0478
+
+5. [211.4s - 214.4s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): But tell him this he will follow up
+   Original (TA):  மனப்பென்று எடுவலைகவும் இக்òige வேண்டாலும் humilityல் என்றால், மரிக்கமாசி', மதிய் நேளை அவர் நாற்றி,
+   Salience Score: 0.0072
+
+6. [251.4s - 282.0s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): You might not know if he's been running into the village if he's still alive.
+   Original (TA):  கல்யானிக்கால் செய்துகொள்ள முயன் தவறுக்குடன் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொடும் கொட
+   Salience Score: 0.0414
+

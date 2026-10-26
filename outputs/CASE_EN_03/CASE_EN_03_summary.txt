@@ -1,0 +1,51 @@
+===========================================================================
+COURT PROCEEDING EXTRACTIVE SUMMARY REPORT
+Case / Recording: CASE_EN_03
+Detected Language: HI (83.0% confidence)
+Duration: 151.35s | Method: TextRank Graph Centrality Summarizer
+DISCLAIMER: This extractive summary is an assistive reference tool for academic and
+research purposes only. Verify all statements against the original video recordings.
+===========================================================================
+
+--- KEY CHRONOLOGICAL COURT MOMENTS ---
+
+1. [012.9s - 015.5s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): Jari Khan, where did you come from?
+   Original (HI):  Jari Khan, where did you come from?
+   Salience Score: 0.0497
+
+2. [021.5s - 024.5s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): The finger print and the other Jari Khan, who was already killed by acid,
+   Original (HI):  The finger print and the other Jari Khan, who was already killed by acid,
+   Salience Score: 0.0382
+
+3. [050.6s - 051.2s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): Why won't he leave?
+   Original (HI):  Why won't he leave?
+   Salience Score: 0.0338
+
+4. [056.3s - 057.3s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): What is he saying?
+   Original (HI):  What is he saying?
+   Salience Score: 0.0268
+
+5. [089.3s - 091.9s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): and it's not yet the bigger print is yet failed
+   Original (HI):  and it's not yet the bigger print is yet failed
+   Salience Score: 0.0262
+
+6. [097.8s - 099.8s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): that the prosecution's life is over yet
+   Original (HI):  that the prosecution's life is over yet
+   Salience Score: 0.0361
+
+7. [112.3s - 115.3s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): you have to start saying that you will not forget
+   Original (HI):  you have to start saying that you will not forget
+   Salience Score: 0.0268
+
+8. [139.2s - 142.5s] [TESTIMONY_OR_PROCEDURAL]
+   Summary (English): And this is the reason why everyone has come to know.
+   Original (HI):  And this is the reason why everyone has come to know.
+   Salience Score: 0.0344
+

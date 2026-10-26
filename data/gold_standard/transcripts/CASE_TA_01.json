@@ -1,0 +1,51 @@
+{
+  "case_id": "CASE_TA_01",
+  "source_title": "Parasakthi (1952 Classic Court Monologue)",
+  "language": "ta",
+  "sentences": [
+    {
+      "sentence_id": 1,
+      "speaker": "Gunasekaran",
+      "speaker_role": "Accused",
+      "start_time": 12.0,
+      "end_time": 30.0,
+      "text": "நீதிமன்றத்திற்கு வந்திருப்பது குற்றத்தை மறுக்க அல்ல, குற்றத்திற்கான காரணத்தை விளக்க வந்திருக்கிறேன்.",
+      "salience_score": 2,
+      "category": "STATEMENT_OF_ACCUSED",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 2,
+      "speaker": "Gunasekaran",
+      "speaker_role": "Accused",
+      "start_time": 32.0,
+      "end_time": 55.0,
+      "text": "பசியால் வாடும் ஒரு ஏழை உணவை திருடினால் அது சட்டப்படி திருட்டு, ஆனால் பசியை உருவாக்கிய சமூகம் குற்றவாளி இல்லையா?",
+      "salience_score": 3,
+      "category": "CORE_DEFENSE_SPEECH",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 3,
+      "speaker": "Gunasekaran",
+      "speaker_role": "Accused",
+      "start_time": 58.0,
+      "end_time": 80.0,
+      "text": "கோவிலில் அநீதி நடக்கும் போது சிலைகள் பேசாது, ஆனால் மனிதனின் நீதி மன்றம் வாய்மை தவறக் கூடாது.",
+      "salience_score": 3,
+      "category": "RHETORICAL_ARGUMENT",
+      "in_gold_summary": true
+    },
+    {
+      "sentence_id": 4,
+      "speaker": "Judge",
+      "speaker_role": "Judge",
+      "start_time": 82.0,
+      "end_time": 100.0,
+      "text": "சட்டத்தின் வரம்புகளை உணர்ந்து நீதிமன்றம் வழக்கின் சூழ்நிலையை ஆராய்ந்து இறுதி தீர்ப்பை ஒத்திவைக்கிறது.",
+      "salience_score": 3,
+      "category": "JUDICIAL_ORDER",
+      "in_gold_summary": true
+    }
+  ]
+}

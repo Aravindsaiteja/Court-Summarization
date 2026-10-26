@@ -1,0 +1,15 @@
+===========================================================================
+COURT PROCEEDING EXTRACTIVE SUMMARY REPORT
+Case / Recording: YTDown.com_YouTube_Media_GSu7BGbyJqc_Legally-Blonde-2001-Elle-Wins-Scene-11-11-Movieclips_002_720p
+Detected Language: EN (99.5% confidence)
+Duration: 208.56s | Method: TextRank Graph Centrality Summarizer
+DISCLAIMER: This extractive summary is an assistive reference tool for academic and
+research purposes only. Verify all statements against the original video recordings.
+===========================================================================
+
+--- KEY CHRONOLOGICAL COURT MOMENTS ---
+
+1. [151.7s - 153.3s] [JUDICIAL_RULING]
+   Summary (English): this case is dismissed.
+   Salience Score: 0.0941
+

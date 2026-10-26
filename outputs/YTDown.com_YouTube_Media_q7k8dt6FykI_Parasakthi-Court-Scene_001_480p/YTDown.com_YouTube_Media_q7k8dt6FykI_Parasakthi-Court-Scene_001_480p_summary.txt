@@ -1,0 +1,16 @@
+===========================================================================
+COURT PROCEEDING EXTRACTIVE SUMMARY REPORT
+Case / Recording: YTDown.com_YouTube_Media_q7k8dt6FykI_Parasakthi-Court-Scene_001_480p
+Detected Language: TA (98.5% confidence)
+Duration: 298.96s | Method: TextRank Graph Centrality Summarizer
+DISCLAIMER: This extractive summary is an assistive reference tool for academic and
+research purposes only. Verify all statements against the original video recordings.
+===========================================================================
+
+--- KEY CHRONOLOGICAL COURT MOMENTS ---
+
+1. [082.0s - 105.0s] [JUDICIAL_RULING]
+   Summary (English): Acknowledging statutory boundaries, the Court carefully weighs the mitigating circumstances and reserves its final judgment.
+   Original (TA):  சட்டத்தின் வரம்புகளை உணர்ந்து நீதிமன்றம் வழக்கின் சூழ்நிலையை ஆராய்ந்து இறுதி தீர்ப்பை ஒத்திவைக்கிறது.
+   Salience Score: 7.5
+

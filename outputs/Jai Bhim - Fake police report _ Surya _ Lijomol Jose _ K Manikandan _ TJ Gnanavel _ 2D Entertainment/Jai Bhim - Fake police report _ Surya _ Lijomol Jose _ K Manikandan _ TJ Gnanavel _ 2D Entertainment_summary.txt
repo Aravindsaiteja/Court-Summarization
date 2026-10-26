@@ -1,0 +1,16 @@
+===========================================================================
+COURT PROCEEDING EXTRACTIVE SUMMARY REPORT
+Case / Recording: Jai Bhim - Fake police report _ Surya _ Lijomol Jose _ K Manikandan _ TJ Gnanavel _ 2D Entertainment
+Detected Language: TA (65.5% confidence)
+Duration: 394.62s | Method: TextRank Graph Centrality Summarizer
+DISCLAIMER: This extractive summary is an assistive reference tool for academic and
+research purposes only. Verify all statements against the original video recordings.
+===========================================================================
+
+--- KEY CHRONOLOGICAL COURT MOMENTS ---
+
+1. [000.0s - 005.8s] [JUDICIAL_RULING]
+   Summary (English): The court is not in the state of the Court's court.
+   Original (TA):  என்னை Juniorweetings whatsoever, சி weather is handheld, சி便.
+   Salience Score: 0.4274
+
